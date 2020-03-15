@@ -16,9 +16,15 @@ class Core{
             $controller = 'ErroController';
         }
 
-        // Executa o metodo index do controller, sem parametros
+        if(isset($urlGet['id']) && $urlGet['id'] != null){
+            $id[] = $urlGet['id'];
+        }else{
+            $id = array();
+        }
+
+        // Executa o metodo index do controller, com parametros id
         call_user_func_array(
-            array(new $controller, $acao), array()
+            array(new $controller, $acao), $id
         );
         
     }

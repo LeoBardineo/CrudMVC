@@ -1,0 +1,9 @@
+<section>
+    <h1>Postagens ({{postagens|length}}) :</h1>
+    {% for postagem in postagens %}
+    <article>
+        <h2><a href="http://localhost/CrudMVC/?pagina=post&id={{postagem.id}}">{{postagem.titulo}}</a></h2>
+        <p>{{postagem.conteudo}}</p>
+    </article>
+    {% endfor %}
+</section>
