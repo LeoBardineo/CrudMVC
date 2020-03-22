@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([A-z_-]+[\/]*)$ ?pagina=$1 [QSA,NC,L]
+RewriteRule ^([A-z_-]+)\/([A-z_-]+[\/]*)$ ?pagina=$1&metodo=$2 [QSA,NC,L]
+RewriteRule ^([A-z_-]+)\/([A-z_-]+)\/([0-9]+[\/]*)$ ?pagina=$1&metodo=$2&id=$3 [QSA,NC,L]
+RewriteRule ^([A-z_-]+)\/([0-9]+[\/]*)$ ?pagina=post&id=$2 [QSA,NC,L]

@@ -3,4 +3,29 @@
         <h2>{{titulo}}</h2>
         <p>{{conteudo}}</p>
     </article>
+    <hr>
+    <br>
+    <h3>Comentar</h3>
+    <form action="addComment" method="POST">
+        <input type="hidden" name="id" value="{{id}}">
+
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="comentario">Comentário</label>
+        <textarea name="comentario" id="comentario" cols="10" rows="5"></textarea>
+
+        <input type="submit" value="Comentar">
+    </form>
+    {% if comentarios == false %}
+        <h3>Nenhum comentário encontrado.</h3>
+    {% else %}
+        <h2>Comentários: ({{comentarios|length}})</h2>
+        {% for comentario in comentarios %}
+        <div class="comentario">
+            <h3>{{comentario.nome}}</h3>
+            <p>{{comentario.mensagem}}</p>
+        </div>
+        {% endfor %}
+    {% endif %}
 </section>

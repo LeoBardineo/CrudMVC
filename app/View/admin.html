@@ -1,0 +1,20 @@
+<h1 class="title-page">Gerenciador de conteúdo</h1>
+<a class="btn-create" href="admin/create">Criar publicação</a>
+<hr>
+<h2>Postagens ({{postagens|length}}) :</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Alteração</th>
+        <th>Deleção</th>
+    </tr>
+    {% for postagem in postagens %}
+    <tr>
+        <td>{{postagem.id}}</td>
+        <td>{{postagem.titulo}}</td>
+        <td ><a href="http://localhost/CrudMVC/admin/change/{{postagem.id}}">Alterar</a></td>
+        <td><a href="http://localhost/CrudMVC/admin/delete/{{postagem.id}}">Deletar</a></td>
+    </tr>
+    {% endfor %}
+</table>

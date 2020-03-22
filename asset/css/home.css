@@ -1,0 +1,19 @@
+section > h1{
+    font-size: 30px;
+}
+
+article{
+    margin: 30px 0px;
+}
+
+article > h2 > a{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+article > p{
+    border-left: 5px solid white;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+}

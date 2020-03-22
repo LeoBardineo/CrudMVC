@@ -1,0 +1,12 @@
+<h1>Atualizar publicação</h1>
+<form action="../update" method="POST">
+    <input type="hidden" name="id" value="{{id}}">
+    
+    <label for="titulo">Título</label>
+    <input type="text" name="titulo" id="titulo" value="{{titulo}}">
+
+    <label for="conteudo">Conteúdo</label>
+    <textarea name="conteudo" id="conteudo" cols="10" rows="5">{{conteudo}}</textarea>
+
+    <input type="submit" value="Atualizar">
+</form>
